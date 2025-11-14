@@ -1,6 +1,8 @@
 import smtplib, os
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from dotenv import load_dotenv
+load_dotenv()
 
 SKILLS = ["react", "node", "flask", "postgres", "tailwind", "typescript", "mongodb"]
 
@@ -29,7 +31,7 @@ def send_email(jobs):
                      f"📍 {j['location']} | 🌐 {j['source']}<br>"
                      f"<a href='{j['link']}'>Apply here</a><br><br>")
     msg.attach(MIMEText(html, "html"))
-
+    
     with smtplib.SMTP_SSL("smtp.gmail.com", 465) as s:
         s.login(sender, password)
         s.send_message(msg)
