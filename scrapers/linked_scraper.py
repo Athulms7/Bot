@@ -1,6 +1,6 @@
 import requests, os
-from dotenv import load_dotenv
-load_dotenv()
+# from dotenv import load_dotenv
+# load_dotenv()
 
 def linkedin_jobs():
     key = os.getenv("SERP_API_KEY") or ""

@@ -1,8 +1,8 @@
 import smtplib, os
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from dotenv import load_dotenv
-load_dotenv()
+# from dotenv import load_dotenv
+# load_dotenv()
 
 SKILLS = ["react", "node", "flask", "postgres", "tailwind", "typescript", "mongodb"]
 
